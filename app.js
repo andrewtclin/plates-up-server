@@ -16,9 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 //#region  ------ api routes ------
 // routes registerations
 const userRouter = require("./routes/user");
+const loginRouter = require("./routes/login");
 
 // endpoints definition
 app.use("/apis/v1/user", userRouter);
+app.use("/apis/v1/login", loginRouter);
 //#endregion ------ api routes ------
 
 //#region ------ api error handling ------
