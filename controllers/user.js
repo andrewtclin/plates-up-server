@@ -15,6 +15,7 @@ const getUser = async (req, res) => {
         res,
         200,
         {
+          userId: user.user_id,
           username: user.username,
           email: user.email,
           lastname: user.lastname,
