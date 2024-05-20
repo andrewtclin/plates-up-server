@@ -45,7 +45,6 @@ bower_components
 build/Release
 
 # Dumped database files
-*.sql
 *.dump
 
 # Session Storage
