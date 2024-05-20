@@ -26,3 +26,5 @@ initializeDatabase("user/getUser.sql", [], false, true);
 initializeDatabase("user/updateUser.sql", [], false, true);
 initializeDatabase("user/deleteUser.sql", [], false, true);
 initializeDatabase("login/login.sql", [], false, true);
+initializeDatabase("exercise/createExercise.sql", [], false, true);
+initializeDatabase("exercise/getExercise.sql", [], false, true);
