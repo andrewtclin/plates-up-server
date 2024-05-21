@@ -23,3 +23,12 @@ CREATE TABLE exercises (
     exercise_name VARCHAR(255) NOT NULL UNIQUE,
     user_id INT NOT NULL
 );
+
+-- create progress table
+CREATE TABLE progresses (
+    progress_id INT AUTO_INCREMENT PRIMARY KEY,
+    exercise_id INT NOT NULL,
+    user_id INT NOT NULL,
+    weights INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

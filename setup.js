@@ -30,3 +30,5 @@ initializeDatabase("exercise/createExercise.sql", [], false, true);
 initializeDatabase("exercise/getExercise.sql", [], false, true);
 initializeDatabase("exercise/deleteExercise.sql", [], false, true);
 initializeDatabase("exercise/updateExercise.sql", [], false, true);
+initializeDatabase("progress/newProgress.sql", [], false, true);
+initializeDatabase("progress/getProgress.sql", [], false, true);
