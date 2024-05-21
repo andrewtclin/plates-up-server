@@ -39,7 +39,43 @@ const createExercise = async (req, res) => {
   }
 };
 
+// delete exercise information
+const deleteExercise = async (req, res) => {
+  const { exerciseId, userId } = req.body;
+
+  try {
+    const sql = "CALL DeleteExercise(?, ?)";
+
+    await executeQuery(sql, [exerciseId, userId]);
+
+    apiResult(res, 200, {}, "Exercise deleted successfully");
+  } catch (err) {
+    console.error("Failed to delete exercise:", err);
+    apiResult(res, 500, {}, "Failed to delete exercise");
+  }
+};
+
+// update exercise
+const updateExercise = async (req, res) => {
+  const { exerciseId, exerciseName, userId } = req.body;
+
+  try {
+    // prepare to call stored procedure
+    const sql = "CALL UpdateExercise(?, ?, ?)";
+
+    // execute the stored procedure
+    await executeQuery(sql, [exerciseId, exerciseName, userId]);
+
+    apiResult(res, 200, "", "Exercise updated successfully");
+  } catch (err) {
+    console.error("Failed to update exercise:", err);
+    apiResult(res, 500, {}, "Failed to update exercise");
+  }
+};
+
 module.exports = {
   createExercise,
   getExercise,
+  deleteExercise,
+  updateExercise,
 };
