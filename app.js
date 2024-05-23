@@ -1,6 +1,8 @@
 const express = require("express");
 const logger = require("morgan");
 const env = require("./env");
+const swaggerjsdoc = require("swagger-jsdoc");
+const swaggerui = require("swagger-ui-express");
 
 const app = express();
 
@@ -25,6 +27,26 @@ app.use("/apis/v1/user", userRouter);
 app.use("/apis/v1/login", loginRouter);
 app.use("/apis/v1/exercise", exerciseRouter);
 app.use("/apis/v1/progress", progressRouter);
+
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    servers: [{ url: `http://${env.SERVER_HOST}:${env.SERVER_PORT}/` }],
+    info: {
+      title: "Plates-Up API Documentation",
+      version: "1.0.0",
+      description: "The exercise logs API for Plates-Up.",
+    },
+    contact: {
+      name: "TC. Lin",
+      url: "https://tclin.jastudio-tech.com/",
+      email: "chuntcdj@gmail.com",
+    },
+  },
+  apis: ["./routes/*.js"],
+};
+const specs = swaggerjsdoc(options);
+app.use("/api-docs", swaggerui.serve, swaggerui.setup(specs));
 
 //#endregion ------ api routes ------
 

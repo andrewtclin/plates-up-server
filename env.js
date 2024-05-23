@@ -1,5 +1,5 @@
 // server configuration
-const SERVER_HOST = "0.0.0.0";
+const SERVER_HOST = "localhost";
 const SERVER_PORT = 3000;
 const SERVER_DEBUG = true;
 
