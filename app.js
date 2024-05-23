@@ -28,6 +28,7 @@ app.use("/apis/v1/login", loginRouter);
 app.use("/apis/v1/exercise", exerciseRouter);
 app.use("/apis/v1/progress", progressRouter);
 
+// swagger documentation
 const options = {
   definition: {
     openapi: "3.0.0",

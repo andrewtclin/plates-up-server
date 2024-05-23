@@ -1,3 +1,4 @@
+// database initialization script
 const fs = require("fs");
 const path = require("path");
 const { executeQuery } = require("./database/utils/db");

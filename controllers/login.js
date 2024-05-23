@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const { executeQuery } = require("../database/utils/db");
 const { apiResult } = require("../utils/apiResult");
 
+// login user
 const loginUser = async (req, res) => {
   const { username, password } = req.body;
   try {
