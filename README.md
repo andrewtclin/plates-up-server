@@ -3,6 +3,7 @@
 This project is licensed under _MIT_, feel free to reuse it with **original ownership mentioned**.
 
 The server-side of this project is built with _Node.js_ runtime, _express.js_ framework.
+* **Swagger** is used to create documentation of the APIs.
 
 For the client-side, please refer to my other repository [_plates-up-client_](https://github.com/andrewtclin/plates-up-client).
 
@@ -65,6 +66,7 @@ For details of the dependencies, check _package.json_.
 In general, this project uses:
 
 - express - the main framework for serving backend apis
+- swagger - documentation of APIs
 - mysql2 - for mysql database access and functionalities
 - bcrypt - the encrypt the password stored in the database
 
