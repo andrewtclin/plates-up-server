@@ -4,7 +4,7 @@ This project is licensed under _MIT_, feel free to reuse it with **original owne
 
 The server-side of this project is built with _Node.js_ runtime, _express.js_ framework.
 
-For the client-side, please refer to my other repository _plates-up-client_.
+For the client-side, please refer to my other repository [_plates-up-client_](https://github.com/andrewtclin/plates-up-client).
 
 ---
 
