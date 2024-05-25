@@ -3,12 +3,14 @@ const logger = require("morgan");
 const env = require("./env");
 const swaggerjsdoc = require("swagger-jsdoc");
 const swaggerui = require("swagger-ui-express");
+var cors = require("cors");
 
 const app = express();
 
 //#region ------ server configuration ------
 // debug logger
 app.use(logger("dev"));
+app.use(cors());
 
 // data parser
 app.use(express.json());
